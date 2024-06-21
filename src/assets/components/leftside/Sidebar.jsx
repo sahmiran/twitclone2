@@ -17,7 +17,7 @@ import { Button } from "@mui/material";
 function Sidebar() {
   return (
     <div className="sidebar">
-      <XIcon />
+      <XIcon className="xicon" />
       <SidebarOption active Icon={HomeIcon} text="Home" />
       <SidebarOption Icon={SearchIcon} text="Explore" />
       <SidebarOption Icon={NotificationsIcon} text="Notifications" />
@@ -31,7 +31,7 @@ function Sidebar() {
       <SidebarOption Icon={PendingIcon} text="More" />
       {/* button -> twet  */}
       <Button variant="outlined" className="sidebar-send">
-        Send
+        POST
       </Button>
     </div>
   );

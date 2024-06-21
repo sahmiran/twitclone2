@@ -1,10 +1,16 @@
 .sidebar {
   border-right: 1px solid var(--twitter-color);
-  flex: 0.25;
+  flex: 0.3;
   min-width: 250px;
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.xicon {
+  font-size: 30px !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
 }
 
 .sidebar-send {
@@ -13,8 +19,9 @@
   color: white !important;
   font-weight: 700 !important;
   text-transform: inherit !important;
-  border-radius: 20px !important;
+  border-radius: 40px !important;
   height: 50px !important;
   margin-top: 20px !important;
+  margin-left: auto !important;
   width: 100% !important;
 }
