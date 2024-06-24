@@ -11,29 +11,29 @@ function Post({ displayName, username, verified, text, image, avatar }) {
   return (
     <div className="post">
       <div className="post_avatar">
-        <Avatar></Avatar>
+        <Avatar src={avatar} />
       </div>
       <div className="post_body">
         <div className="post_header">
           <div className="post_headerText">
             <h3>
-              Mahmut{" "}
+              {displayName}{" "}
               <span className="post_headerUsername">
-                {" "}
-                <VerifiedIcon className="verify_badge" /> @Mahmut
+                {verified && <VerifiedIcon className="verify_badge" />} @
+                {username}
               </span>
             </h3>
           </div>
           <div className="post_headerDescription">
-            <p>Mahmut'un twitter Clone demo maceraları</p>
+            <p>{text}</p>
           </div>
-          <img src="https://staticg.sportskeeda.com/editor/2023/11/27d3b-16996554432517-1920.jpg" />
-          <div className="post_footer">
-            <ChatBubbleIcon fontSize="small" />
-            <RepeatIcon fontSize="small" />
-            <FavoriteIcon fontSize="small" />
-            <BarChartIcon fontSize="small" />
-          </div>
+        </div>
+        {image && <img src={image} alt="Post" />}
+        <div className="post_footer">
+          <ChatBubbleIcon fontSize="small" />
+          <RepeatIcon fontSize="small" />
+          <FavoriteIcon fontSize="small" />
+          <BarChartIcon fontSize="small" />
         </div>
       </div>
     </div>

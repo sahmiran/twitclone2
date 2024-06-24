@@ -18,18 +18,34 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <XIcon className="xicon" />
-      <SidebarOption active Icon={HomeIcon} text="Home" />
-      <SidebarOption Icon={SearchIcon} text="Explore" />
-      <SidebarOption Icon={NotificationsIcon} text="Notifications" />
-      <SidebarOption Icon={MailOutlineIcon} text="Messages" />
-      <SidebarOption Icon={CheckBoxOutlineBlankIcon} text="Grok" />
-      <SidebarOption Icon={ListAltIcon} text="List" />
-      <SidebarOption Icon={BookmarkIcon} text="Bookmark" />
-      <SidebarOption Icon={GroupIcon} text="Communities" />
-      <SidebarOption Icon={XIcon} text="Premium" />
-      <SidebarOption Icon={PermIdentityIcon} text="Profile" />
-      <SidebarOption Icon={PendingIcon} text="More" />
-      {/* button -> twet  */}
+      <SidebarOption to="/app/home" Icon={HomeIcon} text="Home" />
+      <SidebarOption to="/app/explore" Icon={SearchIcon} text="Explore" />
+      <SidebarOption
+        to="/app/notifications"
+        Icon={NotificationsIcon}
+        text="Notifications"
+      />
+      <SidebarOption
+        to="/app/messages"
+        Icon={MailOutlineIcon}
+        text="Messages"
+      />
+      <SidebarOption
+        to="/app/grok"
+        Icon={CheckBoxOutlineBlankIcon}
+        text="Grok"
+      />
+      <SidebarOption to="/app/list" Icon={ListAltIcon} text="List" />
+      <SidebarOption to="/app/bookmark" Icon={BookmarkIcon} text="Bookmark" />
+      <SidebarOption
+        to="/app/communities"
+        Icon={GroupIcon}
+        text="Communities"
+      />
+      <SidebarOption to="/app/premium" Icon={XIcon} text="Premium" />
+      <SidebarOption to="/app/profile" Icon={PermIdentityIcon} text="Profile" />
+      <SidebarOption to="/app/more" Icon={PendingIcon} text="More" />
+      {/* button -> tweet  */}
       <Button variant="outlined" className="sidebar-send">
         POST
       </Button>

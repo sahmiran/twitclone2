@@ -2,19 +2,26 @@ import React from "react";
 import "./Feed.css";
 import TwetBox from "./TwetBox";
 import Post from "./Post";
-function Feed() {
+
+function Feed({ posts }) {
   return (
     <div className="feed">
       <div className="feed_header">
         <h2>Home</h2>
       </div>
       <TwetBox />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      {posts &&
+        posts.map((post, index) => (
+          <Post
+            key={index}
+            displayName={post.displayName}
+            username={post.username}
+            verified={post.verified}
+            text={post.text}
+            image={post.image}
+            avatar={post.avatar}
+          />
+        ))}
     </div>
   );
 }
