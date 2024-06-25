@@ -7,7 +7,7 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    navigate("/app");
+    navigate("/homepage");
   };
 
   return (
@@ -24,7 +24,6 @@ function Login() {
         <p className="headerp">Hemen Katıl</p>
         <form className="login-form" onSubmit={handleLogin}>
           <button type="submit">Login</button>
-
           <button type="button">Kayıt Ol</button>
           <p>veya</p>
           <button type="button">Kayıt Ol</button>

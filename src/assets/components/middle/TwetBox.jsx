@@ -1,18 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TwetBox.css";
 import { Avatar, Button } from "@mui/material";
-function TwetBox() {
+function TwetBox({ addPost }) {
+  const [tweetMessage, setTweetMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (tweetMessage) {
+      const newPost = {
+        displayName: "New User",
+        username: "newuser123",
+        verified: false,
+        text: tweetMessage,
+        image: "",
+        avatar: "",
+      };
+      addPost(newPost);
+      setTweetMessage("");
+    }
+  };
+
   return (
     <div className="twetBox">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="twetBox_input">
           <Avatar></Avatar>
-          <input placeholder="What is happening?" type="text" />
+          <input
+            placeholder="What's happening?"
+            type="text"
+            value={tweetMessage}
+            onChange={(e) => setTweetMessage(e.target.value)}
+          />
         </div>
-        <Button className="twetBox_twetButton">Post</Button>
+        <Button type="submit" className="twetBox_twetButton">
+          Post
+        </Button>
       </form>
     </div>
   );
 }
-
 export default TwetBox;

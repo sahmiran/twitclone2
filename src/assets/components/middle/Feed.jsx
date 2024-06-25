@@ -3,13 +3,13 @@ import "./Feed.css";
 import TwetBox from "./TwetBox";
 import Post from "./Post";
 
-function Feed({ posts }) {
+function Feed({ posts, addPost }) {
   return (
     <div className="feed">
       <div className="feed_header">
         <h2>Home</h2>
       </div>
-      <TwetBox />
+      <TwetBox addPost={addPost} />
       {posts &&
         posts.map((post, index) => (
           <Post
