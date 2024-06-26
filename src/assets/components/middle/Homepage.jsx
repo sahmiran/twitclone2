@@ -56,6 +56,8 @@ const initialPosts = [
     avatar: "https://picsum.photos/200/",
   },
 ];
+const profileAvatar =
+  "https://randompicturegenerator.com/img/lion-generator/g8e943d28d3e1ebd2c6e489e9e0d341bbb0c55a0cdae13c451eec9f7aec5dc63d6b7589715ab9d3e9e259c6a7ed8573af_640.jpg";
 
 function Homepage() {
   const location = useLocation();
@@ -69,12 +71,17 @@ function Homepage() {
 
   return (
     <div className="homepageContent">
-      <Sidebar username={username} displayName={displayName} />
+      <Sidebar
+        username={username}
+        displayName={displayName}
+        profileAvatar={profileAvatar}
+      />
       <Feed
         posts={posts}
         addPost={addNewPost}
         username={username}
         displayName={displayName}
+        profileAvatar={profileAvatar}
       />
       <Widgets />
     </div>

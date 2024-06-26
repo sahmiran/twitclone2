@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./TwetBox.css";
 import { Avatar, Button } from "@mui/material";
-function TwetBox({ addPost, username, displayName }) {
+function TwetBox({ addPost, username, displayName, profileAvatar }) {
   const [tweetMessage, setTweetMessage] = useState("");
 
   const handleSubmit = (e) => {
@@ -13,7 +13,7 @@ function TwetBox({ addPost, username, displayName }) {
         verified: false,
         text: tweetMessage,
         image: "",
-        avatar: "",
+        avatar: profileAvatar,
       };
       addPost(newPost);
       setTweetMessage("");
@@ -24,7 +24,7 @@ function TwetBox({ addPost, username, displayName }) {
     <div className="twetBox">
       <form onSubmit={handleSubmit}>
         <div className="twetBox_input">
-          <Avatar></Avatar>
+          <Avatar src={profileAvatar} />
           <input
             placeholder="What's happening?"
             type="text"

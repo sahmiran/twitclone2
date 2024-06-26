@@ -4,24 +4,25 @@
   cursor: pointer;
   border-radius: 30px;
   width: max-content;
+  color: white;
 }
 
 .sidebarOption:hover {
-  background-color: #e8f5fe;
-  color: var(--twitter-color);
+  background-color: gray;
+  color: white;
   transition: color 100ms ease-out;
 }
 
 .sidebarOption > .MuiSvgIcon-root {
-  padding: 20px;
+  padding: 10px;
 }
 
 .sidebarOption > h2 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 20px;
   margin-right: 20px;
 }
 
 .sidebarOption--active {
-  color: var(--twitter-color);
+  color: blue;
 }

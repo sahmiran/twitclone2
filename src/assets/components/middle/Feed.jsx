@@ -3,7 +3,7 @@ import "./Feed.css";
 import TwetBox from "./TwetBox";
 import Post from "./Post";
 
-function Feed({ posts, addPost, username, displayName }) {
+function Feed({ posts, addPost, username, displayName, profileAvatar }) {
   return (
     <div className="feed">
       <div className="feed_header">
@@ -13,6 +13,7 @@ function Feed({ posts, addPost, username, displayName }) {
         addPost={addPost}
         username={username}
         displayName={displayName}
+        profileAvatar={profileAvatar}
       />
       {posts &&
         posts.map((post, index) => (

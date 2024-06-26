@@ -27,10 +27,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: black;
+  color: white;
 }
 
 .post_headerUsername {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.profilbutonu:hover {
+  background-color: gray;
+  color: white;
+  transition: color 100ms ease-out !important;
 }

@@ -1,6 +1,6 @@
 .twetBox {
   padding-bottom: 10px;
-  border-bottom: 3px solid var(--twitter-background);
+  border-bottom: 1px solid gray;
   padding-right: 10px;
 }
 
@@ -19,6 +19,8 @@
   margin-left: 20px;
   font-size: 20px;
   border: none;
+  background-color: black;
+  color: white;
 }
 
 .twetBox_twetButton {

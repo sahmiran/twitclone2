@@ -1,0 +1,15 @@
+.widgetsnews {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.widgetsnews:hover {
+  background-color: gray;
+  color: white;
+  transition: color 100ms ease-out !important;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.icerikler {
+  margin-bottom: 5px;
+}

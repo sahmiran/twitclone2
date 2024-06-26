@@ -1,3 +1,30 @@
 .widgets {
   flex: 0.3;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+.widgets_input {
+  display: flex;
+}
+.widgets_searchIcon {
+  color: white;
+}
+.widgets_inputText {
+  color: white;
+  background-color: gray;
+}
+
+.widgets_widgetContainer {
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  color: white;
+  margin-top: 20px;
+  gap: 5px;
+  padding: 10px;
+}
+
+.widgetnewsContainer {
+  padding: 20px 0;
 }

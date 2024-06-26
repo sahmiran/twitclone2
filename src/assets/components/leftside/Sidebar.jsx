@@ -15,7 +15,7 @@ import PendingIcon from "@mui/icons-material/Pending";
 import { Button } from "@mui/material";
 import SidebarProfile from "./SidebarProfile";
 
-function Sidebar({ username, displayName }) {
+function Sidebar({ username, displayName, profileAvatar }) {
   return (
     <div className="sidebar">
       <XIcon className="xicon" />
@@ -34,7 +34,11 @@ function Sidebar({ username, displayName }) {
       <Button variant="outlined" className="sidebar-send">
         POST
       </Button>
-      <SidebarProfile username={username} displayName={displayName} />
+      <SidebarProfile
+        username={username}
+        displayName={displayName}
+        profileAvatar={profileAvatar}
+      />
     </div>
   );
 }
