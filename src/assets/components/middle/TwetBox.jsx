@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./TwetBox.css";
 import { Avatar, Button } from "@mui/material";
-function TwetBox({ addPost }) {
+function TwetBox({ addPost, username, displayName }) {
   const [tweetMessage, setTweetMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (tweetMessage) {
       const newPost = {
-        displayName: "Pelooo",
-        username: "Pelopeloo",
+        displayName,
+        username,
         verified: false,
         text: tweetMessage,
         image: "",
@@ -39,4 +39,5 @@ function TwetBox({ addPost }) {
     </div>
   );
 }
+
 export default TwetBox;

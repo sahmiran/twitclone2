@@ -17,5 +17,4 @@ function SidebarProfile({ username, displayName }) {
     </Button>
   );
 }
-
 export default SidebarProfile;

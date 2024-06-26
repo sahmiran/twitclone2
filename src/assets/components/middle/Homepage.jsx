@@ -3,6 +3,7 @@ import Sidebar from "../leftside/Sidebar";
 import Feed from "./Feed";
 import Widgets from "../widgets/Widgets";
 import "./Homepage.css";
+import { useLocation } from "react-router-dom";
 
 const initialPosts = [
   {
@@ -57,6 +58,9 @@ const initialPosts = [
 ];
 
 function Homepage() {
+  const location = useLocation();
+  const { username, displayName } = location.state;
+
   const [posts, setPosts] = useState(initialPosts);
 
   const addNewPost = (newPost) => {
@@ -65,14 +69,15 @@ function Homepage() {
 
   return (
     <div className="homepageContent">
-      <Sidebar
-        username={posts[0]?.username}
-        displayName={posts[0]?.displayName}
+      <Sidebar username={username} displayName={displayName} />
+      <Feed
+        posts={posts}
+        addPost={addNewPost}
+        username={username}
+        displayName={displayName}
       />
-      <Feed posts={posts} addPost={addNewPost} />
       <Widgets />
     </div>
   );
 }
-
 export default Homepage;

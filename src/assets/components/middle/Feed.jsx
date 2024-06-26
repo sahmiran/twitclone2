@@ -3,13 +3,17 @@ import "./Feed.css";
 import TwetBox from "./TwetBox";
 import Post from "./Post";
 
-function Feed({ posts, addPost }) {
+function Feed({ posts, addPost, username, displayName }) {
   return (
     <div className="feed">
       <div className="feed_header">
         <h2>Home</h2>
       </div>
-      <TwetBox addPost={addPost} />
+      <TwetBox
+        addPost={addPost}
+        username={username}
+        displayName={displayName}
+      />
       {posts &&
         posts.map((post, index) => (
           <Post
