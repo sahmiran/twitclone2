@@ -1,0 +1,55 @@
+.page {
+  display: flex;
+}
+
+.form {
+  width: 25rem;
+  height: 30rem;
+  background-color: #242d34;
+  position: fixed;
+  z-index: 9999;
+  top: 20%;
+  left: 35%;
+  color: white;
+  border-radius: 1rem;
+}
+
+.formheader {
+  display: flex;
+}
+
+.formheader button {
+  float: left;
+  margin-left: 0.7rem;
+  margin-top: 0.7rem;
+  background-color: #242d34;
+  border-radius: 50%;
+  color: white;
+}
+
+.formheaderlogo {
+  position: absolute;
+  left: 50%;
+  top: 0.7rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.titletext {
+  width: 12.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.textkutucugu {
+  background-color: #242d34;
+  height: 2.5rem;
+  width: 12rem;
+  border: 0.5px solid #818589;
+  border-radius: 0.5rem;
+  color: white;
+}

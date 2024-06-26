@@ -1,0 +1,12 @@
+.explorebody {
+  background-color: white;
+  flex: 0.4;
+  border-right: 1px solid gray;
+  max-width: fit-content;
+  overflow-y: scroll;
+  min-width: 300px;
+}
+
+.explorebody::-webkit-scrollbar {
+  display: none;
+}

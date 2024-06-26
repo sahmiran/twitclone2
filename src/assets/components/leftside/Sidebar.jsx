@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import SidebarOption from "./SidebarOption";
 import XIcon from "@mui/icons-material/X";
@@ -15,21 +15,100 @@ import PendingIcon from "@mui/icons-material/Pending";
 import { Button } from "@mui/material";
 import SidebarProfile from "./SidebarProfile";
 
-function Sidebar({ username, displayName, profileAvatar }) {
+function Sidebar({ username, displayName, profileAvatar, setSecim }) {
+  const [activeOption, setActiveOption] = useState("Home");
+
   return (
     <div className="sidebar">
       <XIcon className="xicon" />
-      <SidebarOption active to="" Icon={HomeIcon} text="Home" />
-      <SidebarOption to="" Icon={SearchIcon} text="Explore" />
-      <SidebarOption to="" Icon={NotificationsIcon} text="Notifications" />
-      <SidebarOption to="" Icon={MailOutlineIcon} text="Messages" />
-      <SidebarOption to="" Icon={CheckBoxOutlineBlankIcon} text="Grok" />
-      <SidebarOption to="" Icon={ListAltIcon} text="List" />
-      <SidebarOption to="" Icon={BookmarkIcon} text="Bookmark" />
-      <SidebarOption to="" Icon={GroupIcon} text="Communities" />
-      <SidebarOption to="" Icon={XIcon} text="Premium" />
-      <SidebarOption to="" Icon={PermIdentityIcon} text="Profile" />
-      <SidebarOption to="" Icon={PendingIcon} text="More" />
+      <SidebarOption
+        to=""
+        Icon={HomeIcon}
+        text="Home"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "Home"}
+      />
+      <SidebarOption
+        to=""
+        Icon={SearchIcon}
+        text="Explore"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "Explore"}
+      />
+      <SidebarOption
+        to=""
+        Icon={NotificationsIcon}
+        text="Notifications"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "Notifications"}
+      />
+      <SidebarOption
+        to=""
+        Icon={MailOutlineIcon}
+        text="Messages"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "Messages"}
+      />
+      <SidebarOption
+        to=""
+        Icon={CheckBoxOutlineBlankIcon}
+        text="Grok"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "Grok"}
+      />
+      <SidebarOption
+        to=""
+        Icon={ListAltIcon}
+        text="List"
+        setSecim={setSecim}
+        active={activeOption === "List"}
+        setActiveOption={setActiveOption}
+      />
+      <SidebarOption
+        to=""
+        Icon={BookmarkIcon}
+        text="Bookmark"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "Bookmark"}
+      />
+      <SidebarOption
+        to=""
+        Icon={GroupIcon}
+        text="Communities"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "Communities"}
+      />
+      <SidebarOption
+        to=""
+        Icon={XIcon}
+        text="Premium"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "Premium"}
+      />
+      <SidebarOption
+        to=""
+        Icon={PermIdentityIcon}
+        text="Profile"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "Profile"}
+      />
+      <SidebarOption
+        to=""
+        Icon={PendingIcon}
+        text="More"
+        setSecim={setSecim}
+        setActiveOption={setActiveOption}
+        active={activeOption === "More"}
+      />
       {/* button -> tweet  */}
       <Button variant="outlined" className="sidebar-send">
         POST

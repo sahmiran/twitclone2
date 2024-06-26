@@ -4,7 +4,16 @@ import Feed from "./Feed";
 import Widgets from "../widgets/Widgets";
 import "./Homepage.css";
 import { useLocation } from "react-router-dom";
-
+import Explore from "./Explore";
+import Notifications from "./Notifications";
+import Messages from "./Messages";
+import Grok from "./Grok";
+import List from "./List";
+import Bookmark from "./Bookmark";
+import Communities from "./Communities";
+import Premium from "./Premium";
+import Profile from "./Profile";
+import More from "./More";
 const initialPosts = [
   {
     displayName: "Mahmut",
@@ -62,7 +71,7 @@ const profileAvatar =
 function Homepage() {
   const location = useLocation();
   const { username, displayName } = location.state;
-
+  const [secim, setSecim] = useState("Home");
   const [posts, setPosts] = useState(initialPosts);
 
   const addNewPost = (newPost) => {
@@ -75,14 +84,28 @@ function Homepage() {
         username={username}
         displayName={displayName}
         profileAvatar={profileAvatar}
+        setSecim={setSecim}
       />
-      <Feed
-        posts={posts}
-        addPost={addNewPost}
-        username={username}
-        displayName={displayName}
-        profileAvatar={profileAvatar}
-      />
+      {secim === "Home" && (
+        <Feed
+          posts={posts}
+          addPost={addNewPost}
+          username={username}
+          displayName={displayName}
+          profileAvatar={profileAvatar}
+        />
+      )}
+      {secim === "Explore" && <Explore />}
+      {secim === "Notifications" && <Notifications />}
+      {secim === "Messages" && <Messages />}
+      {secim === "Grok" && <Grok />}
+      {secim === "List" && <List />}
+      {secim === "Bookmark" && <Bookmark />}
+      {secim === "Communities" && <Communities />}
+      {secim === "Premium" && <Premium />}
+      {secim === "Profile" && <Profile />}
+      {secim === "More" && <More />}
+
       <Widgets />
     </div>
   );
