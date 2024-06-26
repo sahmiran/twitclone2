@@ -61,7 +61,10 @@ function Homepage() {
 
   return (
     <div className="homepageContent">
-      <Sidebar />
+      <Sidebar
+        username={posts[0]?.username}
+        displayName={posts[0]?.displayName}
+      />
       <Feed posts={posts} addPost={addNewPost} />
       <Widgets />
     </div>

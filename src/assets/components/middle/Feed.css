@@ -3,7 +3,7 @@
   border-right: 1px solid var(--twitter-color);
   max-width: fit-content;
   overflow-y: scroll;
-  width: 600px;
+  min-width: 300px;
 }
 .feed::-webkit-scrollbar {
   display: none;

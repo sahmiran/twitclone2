@@ -13,8 +13,9 @@ import GroupIcon from "@mui/icons-material/Group";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import PendingIcon from "@mui/icons-material/Pending";
 import { Button } from "@mui/material";
+import SidebarProfile from "./SidebarProfile";
 
-function Sidebar() {
+function Sidebar({ username, displayName }) {
   return (
     <div className="sidebar">
       <XIcon className="xicon" />
@@ -33,6 +34,7 @@ function Sidebar() {
       <Button variant="outlined" className="sidebar-send">
         POST
       </Button>
+      <SidebarProfile username={username} displayName={displayName} />
     </div>
   );
 }

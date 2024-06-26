@@ -8,8 +8,8 @@ function TwetBox({ addPost }) {
     e.preventDefault();
     if (tweetMessage) {
       const newPost = {
-        displayName: "New User",
-        username: "newuser123",
+        displayName: "Pelooo",
+        username: "Pelopeloo",
         verified: false,
         text: tweetMessage,
         image: "",
