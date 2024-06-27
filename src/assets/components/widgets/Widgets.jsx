@@ -2,7 +2,8 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import "./Widgets.css";
 import Widgetsnews from "./Widgetsnews";
-function Widgets() {
+import WidgetsFollow from "./WidgetsFollow";
+function Widgets({ posts }) {
   const newsItems = [
     { title: "#konu başlığı 1", content: "kaç post var konuyla ilgili 1" },
     { title: "#konu başlığı 2", content: "kaç post var konuyla ilgili 2" },
@@ -29,6 +30,9 @@ function Widgets() {
             />
           ))}
         </div>
+      </div>
+      <div className="followSuggest">
+        <WidgetsFollow posts={posts} />
       </div>
     </div>
   );

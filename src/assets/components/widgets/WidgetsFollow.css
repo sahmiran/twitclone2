@@ -1,0 +1,54 @@
+.widgetsfollower {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: white;
+  border: 1px solid gray;
+  padding-left: 5px;
+}
+.followers:hover {
+  background-color: gray;
+  color: white;
+  transition: color 100ms ease-out !important;
+  margin-left: 0;
+  margin-right: 0;
+}
+.followHead {
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+.followers {
+  display: flex;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.beyazFollowButonlar {
+  background-color: white !important ;
+  border: none !important;
+  color: black !important;
+  font-weight: 700 !important;
+  text-transform: inherit !important;
+  border-radius: 40px !important;
+  height: 30px !important;
+
+  width: 30% !important;
+}
+
+.beyazButonKutusu {
+  margin-left: auto;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.followNameKutusu {
+  margin-left: 10px;
+}
+
+.usernameP {
+  color: gray;
+}

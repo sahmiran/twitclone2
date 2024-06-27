@@ -14,6 +14,7 @@ function TwetBox({ addPost, username, displayName, profileAvatar }) {
         text: tweetMessage,
         image: "",
         avatar: profileAvatar,
+        isNew: true,
       };
       addPost(newPost);
       setTweetMessage("");

@@ -106,7 +106,7 @@ function Homepage() {
       {secim === "Profile" && <Profile />}
       {secim === "More" && <More />}
 
-      <Widgets />
+      <Widgets posts={posts} />
     </div>
   );
 }
