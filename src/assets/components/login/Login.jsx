@@ -4,14 +4,14 @@ import "./Login.css";
 import { Button } from "@mui/material";
 import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
+import Loginform from "./Loginform";
 function Login() {
   const navigate = useNavigate();
-  const [username, setUsername] = useState("");
-  const [displayName, setDisplayName] = useState("");
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    navigate("/homepage", { state: { username, displayName } });
+  const [loginPop, setLoginPop] = useState(false);
+  const handleLoginClick = () => {
+    if (loginPop === false) {
+      setLoginPop(true);
+    }
   };
 
   return (
@@ -47,8 +47,11 @@ function Login() {
         <br />
         <br />
         <p>Zaten bir hesabın var mı?</p>
-        <Button className="girisButonu">Giriş yap</Button>
+        <Button className="girisButonu" onClick={handleLoginClick}>
+          Giriş yap
+        </Button>
       </div>
+      {loginPop === true && <Loginform setLogin={setLoginPop} />}
     </div>
   );
 }
