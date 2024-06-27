@@ -1,7 +1,7 @@
 import React from "react";
-
+import "./More.css";
 function More() {
-  return <div>More</div>;
+  return <div className="moreBody">More</div>;
 }
 
 export default More;

@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.form {
+.formArea {
   width: 25rem;
   height: 30rem;
   background-color: #242d34;
@@ -42,7 +42,7 @@
 .titletext {
   width: 12.5rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .textkutucugu {
@@ -52,4 +52,11 @@
   border: 0.5px solid #818589;
   border-radius: 0.5rem;
   color: white;
+}
+
+.inputAlanı {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  gap: 10px;
 }

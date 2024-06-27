@@ -1,4 +1,4 @@
-.explorebody {
+.bookmarkBody {
   background-color: black;
   color: white;
   flex: 0.4;
@@ -8,6 +8,6 @@
   min-width: 300px;
 }
 
-.explorebody::-webkit-scrollbar {
+.bookmarkBody::-webkit-scrollbar {
   display: none;
 }

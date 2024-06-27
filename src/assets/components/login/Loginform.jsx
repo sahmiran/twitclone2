@@ -19,7 +19,7 @@ function Loginform({ setLogin }) {
 
   return (
     <div className="page">
-      <div className="form">
+      <div className="formArea">
         <form onSubmit={handleLogin}>
           <div className="formheader">
             <Button onClick={handleCloseClick}>
@@ -33,23 +33,26 @@ function Loginform({ setLogin }) {
             <div className="titletext">
               <h2>X'e giriş yap</h2>
             </div>
-            <input
-              type="text"
-              placeholder="Display Name"
-              value={displayName}
-              onChange={(e) => setDisplayName(e.target.value)}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-            <Button type="submit">İleri</Button>
-            <Button>Şifreni mi unuttun?</Button>
-            <p>Henüz bir hesabın yok mu?</p>
+            <div className="inputAlanı">
+              {" "}
+              <input
+                type="text"
+                placeholder="Display Name"
+                value={displayName}
+                onChange={(e) => setDisplayName(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+              <Button type="submit">İleri</Button>
+              <Button>Şifreni mi unuttun?</Button>
+              <p>Henüz bir hesabın yok mu?</p>
+            </div>
           </div>
         </form>
       </div>

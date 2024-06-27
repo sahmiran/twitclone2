@@ -1,4 +1,4 @@
-.explorebody {
+.grokBody {
   background-color: black;
   color: white;
   flex: 0.4;
@@ -7,7 +7,6 @@
   overflow-y: scroll;
   min-width: 300px;
 }
-
-.explorebody::-webkit-scrollbar {
+.grokBody::-webkit-scrollbar {
   display: none;
 }

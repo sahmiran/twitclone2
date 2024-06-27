@@ -17,4 +17,6 @@
   z-index: 100;
   border: 1px solid gray;
   padding: 15px 20px;
+  border-left: none;
+  border-right: none;
 }
