@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-
+import { Button } from "@mui/material";
+import GoogleIcon from "@mui/icons-material/Google";
+import AppleIcon from "@mui/icons-material/Apple";
 function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
@@ -23,6 +25,38 @@ function Login() {
       </div>
       <div className="login">
         <h1 className="headertext">Şu anda olup bitenler</h1>
+        <h2 className="headerp">Hemen katıl.</h2>
+        <Button className="beyazButonlar">
+          <span>
+            <GoogleIcon className="gIcon" />{" "}
+          </span>
+          <p> Google ile kaydol </p>
+        </Button>
+        <Button className="beyazButonlar">
+          <span>
+            <AppleIcon />
+          </span>
+          <p>Apple ile kaydol</p>
+        </Button>
+        <p>-------------veya-------------</p>
+        <Button className="kayitButonu">Hesap oluştur</Button>
+        <p>
+          By signing up, you agree to the Terms of Service and Privacy
+          <br /> Policy, including Cookie Use.
+        </p>
+        <br />
+        <br />
+        <p>Zaten bir hesabın var mı?</p>
+        <Button className="girisButonu">Giriş yap</Button>
+      </div>
+    </div>
+  );
+}
+
+export default Login;
+
+/*   <div className="login">
+        <h1 className="headertext">Şu anda olup bitenler</h1>
         <p className="headerp">Hemen Katıl</p>
         <form className="login-form" onSubmit={handleLogin}>
           <input
@@ -41,11 +75,4 @@ function Login() {
           />
           <button type="submit">Login</button>
         </form>
-      </div>
-    </div>
-  );
-}
-
-export default Login;
-
-/*    */
+      </div>  */
