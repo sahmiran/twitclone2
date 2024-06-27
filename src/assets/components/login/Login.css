@@ -50,7 +50,26 @@
   max-width: 350px;
   max-height: 350px;
 }
+.duzCubuk {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  width: 50%;
+}
 
+.custom-lineLeft,
+.custom-lineRight {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.flatline-text {
+  font-size: 14px;
+  color: white;
+}
 .kayitButonu {
   background-color: var(--twitter-color) !important;
   border: none !important;
@@ -62,6 +81,7 @@
   margin-top: 20px !important;
   margin-left: 0px !important;
   width: 50% !important;
+  margin-bottom: 10px !important;
 }
 
 .beyazButonlar {
