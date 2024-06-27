@@ -44,12 +44,12 @@ function Login() {
           <hr className="custom-lineRight" />
         </div>
         <Button className="kayitButonu">Hesap oluştur</Button>
-        <p>
+        <p className="tos">
           By signing up, you agree to the Terms of Service and Privacy
-          <br /> Policy, including Cookie Use.
+          <br className="tos" /> Policy, including Cookie Use.
         </p>
         <br />
-
+        <br />
         <p>Zaten bir hesabın var mı?</p>
         <Button className="girisButonu" onClick={handleLoginClick}>
           Giriş yap
